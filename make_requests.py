@@ -8,7 +8,7 @@ file_counter = 0
 while file_counter < 39:
     ssl._create_default_https_context = ssl._create_unverified_context
     url = 'https://www.ncdc.noaa.gov/cdo-web/api/v2/locations?location&limit=1000&' + 'offset=' + str(offset_counter)
-    headers = {'token': 'WQdlcidQQfajyEKODfcAAbHroYUCAiSc'}
+    headers = {'token': 'mytoken'}
     req = urllib.request.Request(url, headers=headers)
     file_name = './location_' + str(file_counter) + '.json'
     with urllib.request.urlopen(req) as f:
